@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../CSS/c1.css">
+    <title>第一个页面</title>
+    <style>
+        #cl {
+            background-color: #fffbea;
+        }
+    </style>
+</head>
+
+<body id="cl">
+
+    <div>
+
+        <h1 id="cred">标题标签 单行显示</h1>
+        <p>这是段落标签</p>
+        <p>《Fate/Grand Order》是TYPE-MOON发行的角色扮演类手机游戏，为《Fate》系列的续作，于2015年7月30日在日本安卓版上线，
+            [1]并于2016年9月29日在中国大陆正式上线iOS版，每年的4月1日（愚人节）官方都会在应用商店上架最新开发的愚人节小游戏。由其本体衍生的游戏有《Fate/Grand Order
+            Arcade》、《Fate/Grand
+            Order
+            Waltz in the MOONLIGHT/LOSTROOM》等。 [2]</p>
+        <p>游戏的背景是“圣杯战争”，故事围绕着七个不同的时代和七个圣杯展开。玩家需要参与各个章节的故事，进行对战。</p>
+        <a href="#jx">锚点百度连接</a>
+        <br />
+        <strong>加粗文字</strong>
+        <b>加粗文字</b>
+        <br />
+        <em>斜字体</em>
+        <i>斜字体</i>
+        <br />
+        <u>下划线</u>
+        <ins>下划线</ins>
+        <br />
+        <del>删除线</del>
+        <s>删除线</s>
+        <br />
+        <big>文字放大</big>
+        <br />
+        <small>文字缩小</small>
+
+        <div>盒子标签1</div>
+        <div>盒子标签2</div>
+        <span>盒子标签3</span>
+        <span>盒子标签4</span>
+        <br />
+        <img src="../../resources/Images/p0.jpg" alt="这是图片" title="图片" width="800" />
+        <br />
+        <a id="jx" href="https://www.baidu.com" target="_blank">超链接标签 百度</a>
+        <pre>
+        此例演示如何使用 pre 标签
+        对空行和    空格
+        进行控制
+        </pre>
+        <address>
+            以下是地址内容:<br />
+            Written by <a href="mailto:2227957640@qq.com">Jon Doe</a>.<br />
+            Visit us at:<br />
+            Example.com<br>
+            Box 564, Disneyland<br>
+            USA
+        </address>
+
+        <p>该段落文字从左到右显示。</p>
+        <p><bdo dir="rtl">该段落文字从右到左显示。</bdo></p>
+        这是 <sub> 下标</sub> 和 <sup> 上标</sup>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>列标题1</th>
+                    <th>列标题2</th>
+                    <th>列标题3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>行1，列1</td>
+                    <td>行1，列2</td>
+                    <td>行1，列3</td>
+                </tr>
+                <tr>
+                    <td>行2，列1</td>
+                    <td>行2，列2</td>
+                    <td>行2，列3</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>单元格跨两列:</h4>
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th colspan="2">Telephone</th>
+            </tr>
+            <tr>
+                <td>Bill Gates</td>
+                <td>555 77 854</td>
+                <td>555 77 855</td>
+            </tr>
+        </table>
+
+        <h4>单元格跨两行:</h4>
+        <table border="1">
+            <tr>
+                <th>First Name:</th>
+                <td>Bill Gates</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Telephone:</th>
+                <td>555 77 854</td>
+            </tr>
+            <tr>
+                <td>555 77 855</td>
+            </tr>
+        </table>
+
+        <br />
+        <!-- 一个内容表格 -->
+        <table border="1">
+            <tr>
+                <td>
+                    <p>这是段落标签</p>
+                    <p>这是段落标签</p>
+                </td>
+                <td>
+                    <p>这个表格单元包含另一个表格:</p>
+                    <table border="1">
+                        <tr>
+                            <td>A</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>D</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>这个表格单元包含一个列表:</p>
+                    <ul>
+                        <li>apples</li>
+                        <li>bananas</li>
+                        <li>pineapples</li>
+                    </ul>
+                </td>
+                <td>
+                    HELLO
+                </td>
+
+            </tr>
+        </table>
+
+
+        <h4>没有单元格边距:</h4>
+        <table border="1">
+            <tr>
+                <td>First</td>
+                <td>Row</td>
+            </tr>
+            <tr>
+                <td>Second</td>
+                <td>Row</td>
+            </tr>
+        </table>
+
+        <h4>有单元格边距:</h4>
+        <table border="1" cellpadding="10">
+            <tr>
+                <td>First</td>
+                <td>Row</td>
+            </tr>
+            <tr>
+                <td>Second</td>
+                <td>Row</td>
+            </tr>
+        </table>
+
+
+        <h4>没有单元格间距:</h4>
+        <table border="1">
+            <tr>
+                <td>First</td>
+                <td>Row</td>
+            </tr>
+            <tr>
+                <td>Second</td>
+                <td>Row</td>
+            </tr>
+        </table>
+
+        <h4>单元格间距="0":</h4>
+        <table border="1" cellspacing="0">
+            <tr>
+                <td>First</td>
+                <td>Row</td>
+            </tr>
+            <tr>
+                <td>Second</td>
+                <td>Row</td>
+            </tr>
+        </table>
+
+        <h4>单元格间距="10":</h4>
+        <table border="1" cellspacing="10">
+            <tr>
+                <td>First</td>
+                <td>Row</td>
+            </tr>
+            <tr>
+                <td>Second</td>
+                <td>Row</td>
+            </tr>
+        </table>
+
+        <h2>无序列表</h2>
+        <ul>
+            <li>北京</li>
+            <li>广州</li>
+            <li>南京</li>
+        </ul>
+
+
+
+        <h2>有序列表</h2>
+        <ol>
+            <li>周号</li>
+            <li>周妮娜</li>
+            <li>鲵鲋</li>
+        </ol>
+
+        <ol start="10">
+            <li>周号</li>
+            <li>周妮娜</li>
+            <li>鲵鲋</li>
+        </ol>
+
+        <h2>HTML 自定义列表</h2>
+        <dl>
+            <dt>Coffee</dt>
+            <dd>- black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>- white cold drink</dd>
+        </dl>
+
+        <h2>不同类型的有序表</h2>
+
+        <h4>编号列表：</h4>
+        <ol>
+            <li>Apples</li>
+            <li>Bananas</li>
+            <li>Lemons</li>
+            <li>Oranges</li>
+        </ol>
+
+        <h4>大写字母列表：</h4>
+        <ol type="A">
+            <li>Apples</li>
+            <li>Bananas</li>
+            <li>Lemons</li>
+            <li>Oranges</li>
+        </ol>
+
+        <h4>小写字母列表：</h4>
+        <ol type="a">
+            <li>Apples</li>
+            <li>Bananas</li>
+            <li>Lemons</li>
+            <li>Oranges</li>
+        </ol>
+
+        <h4>罗马数字列表：</h4>
+        <ol type="I">
+            <li>Apples</li>
+            <li>Bananas</li>
+            <li>Lemons</li>
+            <li>Oranges</li>
+        </ol>
+
+        <h4>小写罗马数字列表：</h4>
+        <ol type="i">
+            <li>Apples</li>
+            <li>Bananas</li>
+            <li>Lemons</li>
+            <li>Oranges</li>
+        </ol>
+
+        <h2>不同类型的无序表</h2>
+
+        <p><b>注意：</b> 在 HTML 4中 ul 属性已废弃，HTML5 已不支持该属性，因此我们使用 CSS 代替来定义不同类型的无序列表如下：</p>
+
+        <h4>圆点列表：</h4>
+        <ul style="list-style-type:disc">
+            <li>Apples</li>
+            <li>Bananas</li>
+            <li>Lemons</li>
+            <li>Oranges</li>
+        </ul>
+
+        <h4>圆圈列表：</h4>
+        <ul style="list-style-type:circle">
+            <li>Apples</li>
+            <li>Bananas</li>
+            <li>Lemons</li>
+            <li>Oranges</li>
+        </ul>
+
+        <h4>正方形列表：</h4>
+        <ul style="list-style-type:square">
+            <li>Apples</li>
+            <li>Bananas</li>
+            <li>Lemons</li>
+            <li>Oranges</li>
+        </ul>
+
+
+        <h4>嵌套列表：</h4>
+        <ul>
+            <li>Coffee</li>
+            <li>Tea
+                <ul>
+                    <li>Black tea</li>
+                    <li>Green tea</li>
+                </ul>
+            </li>
+            <li>Milk</li>
+        </ul>
+
+
+        <h2>表单</h2>
+
+        <!-- 以下表单使用 GET 请求发送数据到当前的 URL，method 默认位 GET。 -->
+        <form>
+            <label>Name:
+                <input name="submitted-name" autocomplete="name">
+            </label>
+            <button>Save</button>
+        </form>
+
+        <!-- 以下表单使用 POST 请求发送数据到当前的 URL。 -->
+        <form method="post">
+            <label>Name:
+                <input name="submitted-name" autocomplete="name">
+            </label>
+            <button>Save</button>
+        </form>
+
+        <!-- 表单使用 fieldset, legend, 和 label 标签 -->
+        <form method="post">
+            <fieldset>
+                <legend>Title</legend>
+                <label><input type="radio" name="radio"> Select me</label>
+            </fieldset>
+        </form>
+
+        <form method="get" action="/">
+            <label for="username">用户名</label>
+            <input type="text" id="username" name="username" required>
+
+            <br />
+            <label>
+                密码:
+                <input type="password" name="pwd" required>
+            </label>
+            <br />
+
+            <label>性别:</label>
+            <label>
+                <input type="radio" name="gender" value="male" checked>
+                男
+            </label>
+            <label>
+                <input type="radio" name="gender" value="femal">
+                女
+            </label>
+            <br />
+
+            <label>
+                <input type="checkbox" name="sub" value="sub">
+                订阅推送信息
+            </label>
+            <br />
+
+            <label>
+                国家:
+                <select name="country">
+                    <option value="usa">USA</option>
+                    <option value="CN">CN</option>
+                    <option value="EN">EN</option>
+                </select>
+            </label>
+            <br />
+
+            <input type="submit" value="submit" name="submit">
+
+        </form>
+
+
+
+    </div>
+
+    <script>
+
+
+    </script>
+</body>
+
+
+</html>

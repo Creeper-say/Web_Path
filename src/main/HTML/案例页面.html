@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>案例</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h2>小说排行案例</h2>
+    <table border="1" cellspacing="0">
+        <thead>
+            <th>排名</th>
+            <th>关键词</th>
+            <th>趋势</th>
+            <th>今日搜索</th>
+            <th>最近七日</th>
+            <th>相关连接</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>鬼吹灯</td>
+                <td>&darr;</td>
+                <td>345</td>
+                <td>123</td>
+                <td>
+                    <a href="">贴吧</a>
+                    <a href="">图片</a>
+                    <a href="">百度</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>合并单元格案例</h1>
+    <table align="center" border="1" cellspacing="0">
+        <thead>
+            <th height="50" colspan="5" style="background-color: #e0f0bc; font-size: 20px;">个人简历</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td width="135" height="45" style="text-align: center;"><b>姓名:</b></td>
+                <td width="160" height="45"></td>
+                <td width="135" height="45" style="text-align: center;"><b>性别:</b></td>
+                <td width="160" height="45"></td>
+                <td rowspan="4" width="170" height="190" style="text-align: center;"><b>照片</b></td>
+            </tr>
+            <tr>
+                <td width="135" height="45" style="text-align: center;"><b>婚姻状况:</b></td>
+                <td width="160" height="45"></td>
+                <td width="135" height="45" style="text-align: center;"><b>出生年月:</b></td>
+                <td width="160" height="45"></td>
+            </tr>
+
+            <tr>
+                <td width="135" height="45" style="text-align: center;"><b>民族:</b></td>
+                <td width="160" height="45"></td>
+                <td width="135" height="45" style="text-align: center;"><b>政治面貌:</b></td>
+                <td width="160" height="45"></td>
+            </tr>
+
+            <tr>
+                <td width="135" height="45" style="text-align: center;"><b>身高:</b></td>
+                <td width="160" height="45"></td>
+                <td width="135" height="45" style="text-align: center;"><b>学历:</b></td>
+                <td width="160" height="45"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>综合案例</h1>
+
+    <h3>青春不常在,抓紧谈恋爱</h3>
+
+
+    <form>
+        <table>
+            <tr>
+                <td>性别</td>
+                <td> <!--align="top" 使得表格内的元素居上   -->
+                    <label>
+                        <input type="radio" name="sex" value="male" checked />
+                        <img src="../../resources/Images/nan.png" width="16" />
+                        男
+                    </label>
+                    <label>
+                        <input type="radio" name="sex" value="female" />
+                        <img src="../../resources/Images/nv.png" width="16" />
+                        女
+                    </label>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>生日</td>
+                <td>
+                    <select name="年">
+                        <option>--请选择年--</option>
+                        <option value="2000">2000</option>
+                        <option value="2001">2001</option>
+                        <option value="2002">2002</option>
+                        <option value="2003">2003</option>
+                        <option value="2004">2004</option>
+                        <option value="2005">2005</option>
+                        <option value="2006">2006</option>
+                        <option value="2007">2007</option>
+                    </select>
+
+                    <select name="月">
+                        <option>--请选择月--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+
+                    <select name="日">
+                        <option>--请选择日--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>所在地区</td>
+                <td>
+                    <input type="text" name="address" value="北京四醚大" />
+                </td>
+            </tr>
+            <tr>
+                <td>婚姻状况</td>
+                <td>
+                    <label>
+                        <input type="radio" name="marriage" value="未婚" />
+                        未婚
+                    </label>
+                    <label>
+                        <input type="radio" name="marriage" value="已婚" />
+                        已婚
+                    </label>
+                    <label>
+                        <input type="radio" name="marriage" value="离婚" />
+                        离婚
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>学历</td>
+                <td>
+                    <input type="text" name="stuLevel" value="大学" />
+                </td>
+            </tr>
+            <tr>
+                <td>喜欢的类型</td>
+                <td>
+                    <label>
+                        <input type="radio" name="喜爱" value="可爱" />
+                        可爱的
+                    </label>
+                    <label>
+                        <input type="radio" name="喜爱" value="聪明" />
+                        聪明的
+                    </label>
+                    <label>
+                        <input type="radio" name="喜爱" value="鲜肉" />
+                        小鲜肉
+                    </label>
+                    <label>
+                        <input type="radio" name="喜爱" value="随意" />
+                        都可以
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>自我介绍</td>
+                <td>
+                    <textarea>自我介绍</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="left">
+                    <input type="submit" name="注册" value="免费注册" />
+                </td>
+
+
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="checkbox" name="意见" value="同意" />
+                    我同意
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <a href="/">我是会员,马上登陆</a>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <dl>
+                        <dt>
+                            <h1>我承诺</h1>
+                        </dt>
+                        <dd>
+                            <ul>
+                                <li>年满18</li>
+                                <li>严肃态度</li>
+                                <li>真诚寻找</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+
+
+</body>
+
+</html>

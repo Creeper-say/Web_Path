@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>第二个页面</title>
+    <style>
+        iframe {
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML框架</h1>
+    <iframe src="../../resources/HTM/demo_iframe.htm" width="200" height="400">
+    </iframe>
+    <iframe src="../../resources/HTM/demo_iframe.htm" width="200" height="400" frameborder="0">
+    </iframe>
+    <p>一些旧的浏览器不支持 iframe。</p>
+    <p>如果浏览器不支持 iframes 则不会显示。</p>
+
+    <h1>在框架内显示其他网页</h1>
+    <iframe src="../../resources/HTM/demo_iframe.htm" width="400" height="600" frameborder="0" name="iframe_a"></iframe>
+    <p><a href="https://www.runoob.com" target="iframe_a">RUNOOB</a></p>
+    <!-- <p>rel 属性定义了所链接的资源与当前文档的关系，在 <a>、<area> 和 <link> 元素上有效。</p> -->
+        
+</body>
+
+</html>
