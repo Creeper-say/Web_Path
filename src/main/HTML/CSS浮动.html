@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS浮动</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1,
+        .box2 {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .box2 {
+            width: 150px;
+            height: 150px;
+            background-color: chocolate;
+        }
+
+        .box3 {
+            width: 150px;
+            height: 150px;
+            color: white;
+            background-color: black;
+        }
+
+        .box4 {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+        }
+
+        .box5 {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 100px;
+            width: 1226px;
+            height: 460px;
+        }
+
+        .sidebar {
+            float: left;
+            overflow: hidden;
+            width: 235px;
+            height: 460px;
+            background-color: #8b8584;
+
+        }
+
+        .sidebar ul {
+            margin-top: 19px;
+        }
+
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding-left: 30px;
+            font-size: 14px;
+        }
+
+        .sidebar a:hover {
+            background-color: #ee702e;
+        }
+
+
+        .sidebar li {
+            list-style: none;
+            height: 42px;
+            line-height: 42px;
+        }
+
+        .sidebar .sign {
+            float: right;
+            color: white;
+            font-size: 12px;
+            margin: 0 24px 0 24px;
+        }
+
+        .showPage {
+            float: right;
+            height: 460px;
+            width: 991px;
+            background-color: chocolate;
+        }
+
+        .showPage img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .box6 {
+            width: 1071px;
+            height: 264px;
+            background-color: #eaece9;
+        }
+
+        .box6 div {
+            float: right;
+            margin: 8px 6px;
+            width: 255px;
+            height: 246px;
+            background-color: white;
+        }
+
+        .box7 {
+            width: 1240px;
+            height: 628px;
+            margin: 0 auto;
+            background-color: #f5f5f5;
+        }
+
+        .box7>div:first-child {
+            float: left;
+            width: 234px;
+            height: 100%;
+        }
+
+        .box7>div:first-child a {
+            display: block;
+            height: 100%;
+        }
+
+        .box7>div:first-child img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .box7>div:last-child {
+            float: left;
+            width: 992px;
+            height: 628px;
+
+        }
+
+        .top_box,
+        .bottom_box {
+            height: 300px;
+            margin: 7px 0;
+        }
+
+
+        .top_box li,
+        .bottom_box li {
+            float: left;
+            list-style: none;
+            width: 234px;
+            height: 260px;
+            margin: 0 0 14px 14px;
+
+        }
+
+        /* .top_box li:last-child,
+        .bottom_box li:last-child {
+            margin: 0;
+        } */
+
+
+        .box7>div:last-child a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            height: 100%;
+            text-align: center;
+            padding: 20px 0;
+            background-color: white;
+        }
+
+        .box7 a[href='#']:hover {
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+
+        .box8 {
+            width: 1226px;
+            height: 628px;
+            margin: 0 auto;
+            background-color: #f5f5f5;
+        }
+
+        .img-box {
+            float: left;
+            width: 234px;
+            height: 614px;
+            margin: auto 0;
+        }
+
+        .img-box a {
+            display: block;
+            text-decoration: none;
+        }
+
+        .img-box a img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .grid-box {
+            float: left;
+            width: 992px;
+            height: 628px;
+            /* margin: 0 0 -7px -7px; */
+        }
+
+        .grid-box ul li {
+            list-style: none;
+            margin: 0 0 14px 14px;
+            float: left;
+        }
+
+        .grid-box ul li a {
+            display: block;
+            width: 234px;
+            height: 260px;
+            text-decoration: none;
+            color: black;
+            padding: 20px 0;
+            background-color: white;
+            text-align: center;
+        }
+
+        .box8 a:hover {
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <br><br><br><br><br><br><br><br><br>
+    <div class="box3">
+        hello
+        <div class="box4"> world</div>
+    </div>
+    <br><br><br><br><br><br>
+    <div class="box5">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">手机<span class="sign">▷</span></a></li>
+                <li><a href="#">家电<span class="sign">▷</span></a></li>
+                <li><a href="#">电视<span class="sign">▷</span></a></li>
+                <li><a href="#">笔记<span class="sign">▷</span></a></li>
+                <li><a href="#">穿戴<span class="sign">▷</span></a></li>
+                <li><a href="#">耳机<span class="sign">▷</span></a></li>
+                <li><a href="#">健康<span class="sign">▷</span></a></li>
+                <li><a href="#">生活<span class="sign">▷</span></a></li>
+                <li><a href="#">智能<span class="sign">▷</span></a></li>
+                <li><a href="#">电源<span class="sign">▷</span></a></li>
+            </ul>
+        </div>
+        <div class="showPage">
+            <img src="../../resources/Images/M3.jpeg" />
+        </div>
+
+    </div>
+
+    <div class="box6">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <br><br><br><br><br>
+    <div class="box7">
+        <div>
+            <a href="#">
+                <img src="../../resources/Images/w1.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <div class="top_box">
+                <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                </ul>
+            </div>
+            <div class="bottom_box">
+                <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br>
+    <div class="box8">
+        <div class="img-box">
+            <a href="../../resources/Images/r3.webp"><img src="../../resources/Images/r3.webp" alt=""></a>
+        </div>
+        <div class="grid-box">
+            <ul>
+                <li><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">5</a></li>
+                <li><a href="">6</a></li>
+                <li><a href="">7</a></li>
+                <li><a href="">8</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

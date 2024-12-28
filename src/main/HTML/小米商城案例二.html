@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米商城案例</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .product_page a {
+            display: inline-block;
+            background-color: white;
+            text-decoration: none;
+            color: black;
+            width: 234px;
+            height: 260px;
+            overflow: hidden;
+            margin: 10px;
+        }
+
+        .top_img {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .top_img img {
+            width: 100%;
+        }
+
+        .top_img+p {
+            text-align: left;
+            font-size: 14px;
+            font-weight: 400;
+            width: 200px;
+            margin: 0px 10px 5px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            color: rgb(83, 181, 183);
+        }
+
+        .top_img+p+p {
+            margin: 15px 10px 10px;
+            color: rgb(176, 176, 176);
+            font-size: 12px;
+            width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .product_page>a div:last-child {
+            display: flex;
+            margin: 15px 10px 0px;
+            height: 20px;
+        }
+
+        .product_page>a div:last-child p {
+            display: inline-block;
+        }
+
+        .product_page a div:last-of-type p:first-child {
+            font-size: 14px;
+            width: 130px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin: 0px 15px 0px 0px;
+        }
+
+
+        .product_page a div:last-of-type p:nth-child(2) {
+            color: #3333339e;
+        }
+
+        .product_page a div:last-of-type p:last-child {
+            color: #ff6700;
+            font-size: 14px;
+            margin: 0px 10px 0px 5px;
+        }
+
+        .product_page a:hover {
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px !important;
+        }
+
+        /* body>p:last-of-type {
+            border: solid 1px black;
+            width: 200px;
+            font-size: 14px;
+            line-height: 16px;
+            color: rgb(118, 109, 95); */
+        /* overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;   单行省略 */
+
+
+        /* display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;     
+            注意 父元素的元素显示改为flex
+            多行省略*/
+        /* } */
+
+        /* body>div:last-of-type>p:last-of-type {
+            padding: 0px 10px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="product_page">
+        <a href="/">
+            <div class="top_img">
+                <img src="../../resources/Images/R2.png" title="商品图片" />
+            </div>
+            <p>这是评论这是评论这是评论这是评论评论这是评论评论这是评论评论这是评论评论评论这是评论</p>
+            <p>xxx的评论</p>
+            <div>
+                <p>XiaoMi 15系列代数空间克拉夫定是</p>
+                <p>|</p>
+                <p>3200元</p>
+            </div>
+        </a>
+    </div>
+
+    <!-- <p>石棍地可松大开静棍地可松大开静棍地可松大开静静棍地可松大开静</p> -->
+
+    <!-- <div style="width: 300px;">
+        <p>时光慢些吧,不要再让你的泪流~</p>
+    </div> -->
+    
+</body>
+
+</html>

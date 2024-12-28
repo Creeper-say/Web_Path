@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            color: #33333364;
+            text-align: center;
+            background-color: #ecedf7;
+        }
+
+        .top {
+            width: 98%;
+            margin: 10px auto;
+            height: 42px;
+            font-size: 20px;
+            line-height: 42px;
+
+        }
+
+        .banner {
+            width: 1240px;
+            height: 326px;
+            margin: 10px auto;
+            font-size: 20px;
+            line-height: 326px;
+        }
+
+        .top-father,
+        .buttom-father {
+            margin: 0 auto;
+            width: 1250px;
+            height: 130px;
+            background-color: white;
+        }
+
+
+        .buttom-father {
+            height: 360px;
+        }
+
+        .top-box {
+            float: left;
+            width: 300px;
+            height: 120px;
+            margin: 0 0px 10px 10px;
+            background-color: #ecedf7;
+        }
+
+        .buttom-box {
+            float: left;
+            width: 300px;
+            height: 350px;
+            margin: 0 0px 10px 10px;
+            background-color: #ecedf7;
+        }
+
+        .footer {
+            width: 98%;
+            height: 250px;
+            font-size: 20px;
+            line-height: 250px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">top</div>
+    <div class="banner">banner</div>
+    <div class="top-father">
+        <div class="top-box"></div>
+        <div class="top-box"></div>
+        <div class="top-box"></div>
+        <div class="top-box"></div>
+    </div>
+    <div class="buttom-father">
+        <div class="buttom-box"></div>
+        <div class="buttom-box"></div>
+        <div class="buttom-box"></div>
+        <div class="buttom-box"></div>
+    </div>
+    <div class="footer">footer</div>
+</body>
+
+</html>

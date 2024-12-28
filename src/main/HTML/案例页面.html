@@ -5,7 +5,68 @@
     <meta charset="utf-8">
     <title>案例</title>
     <style>
+        /* div:nth-of-type(1) {
+            margin-bottom: 10px;
+        } */
 
+
+        body>div:nth-of-type(1)>h2:first-of-type {
+            text-align: center;
+            font-size: 26px;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* div:nth-of-type(1)>span:first-of-type {
+            text-align: center;
+        } */
+
+        body>div:nth-of-type(1)>div:first-of-type {
+            /* border: solid 1px black; */
+            width: 100%;
+            height: 26px;
+            display: block;
+            text-align: center;
+        }
+
+        body>div:nth-of-type(1) span {
+            font-size: 14px;
+            color: #33333352;
+        }
+
+        body>div:nth-of-type(1) a[href*=news] {
+            text-decoration: none;
+            color: #0f2fe2;
+        }
+
+        body>div:nth-of-type(1) div[style] {
+            border: solid 1px #33333344;
+            vertical-align: middle;
+            height: 24px;
+        }
+
+        body>div:nth-of-type(1) div[style]>input {
+            outline: none;
+            border: 0;
+        }
+
+        form[style*=display] button {
+            height: 24px;
+            line-height: 20px;
+            border: solid 1px #33333303;
+            font-weight: 600;
+        }
+
+        body>div:nth-of-type(2) p {
+            text-indent: 2em;
+            line-height: 26px;
+        }
+
+        body>div:nth-of-type(2) div[style] {
+            color: #33333374;
+            font-weight: 600;
+        }
     </style>
 </head>
 
@@ -241,8 +302,32 @@
         </table>
     </form>
 
-
-
+    <h1>CSS综合案例</h1>
+    <div>
+        <h2>新一股较强冷空气今起影响中东部 雨雪稀少格局持续</h2>
+        <div>
+            <span>2024-12-19 07:50:53 来源:</span>
+            <a href="http://news.weather.com.cn/2024/12/4003766.shtml" style="margin-right: 5px;">中国天气网</a>
+            <form action="/" style="display: inline;">
+                <div style="display: inline-block;"><input type="search" placeholder="请输入查询条件" /></div>
+                <button>搜索</button>
+            </form>
+        </div>
+    </div>
+    <br />
+    <hr>
+    <div>
+        <p>中国天气网讯
+            今天（12月19日）开始至21日，新一股较强冷空气将影响中东部地区，北方大部将出现4至6℃降温，部分地区降温幅度可达6至8℃。降温过程中，多地气温维持较常年同期偏低水平，还将创今年下半年来新低。降水方面，昨天西北地区等地降雪短暂增多后，今天又迅速减弱，全国大部地区继续维持雨雪稀少的格局。
+        </p>
+        <p style="text-indent: 0em;"><strong>较强冷空气来袭 多地气温将再创今年下半年来新低</strong></p>
+        <p>进入大雪节气以来，冷空气频繁来袭，我国大部地区气温屡创今年下半年来新低。在冷空气影响下，昨天早晨，长春、沈阳、石家庄又度过了今年下半年最冷早晨。</p>
+        <div style="text-align: center;">
+            <img src="../../resources/Images/j1.JPG" />
+        </div>
+        <p>中国天气网提醒，近期我国大部地区降水稀少、天干物燥，公众需注意用火用电安全，防范火灾。出现降雪的区域谨防路面湿滑、能见度降低对交通的不利影响。</p>
+        <div style="margin-left: 93%;">编辑：梁杰</div>
+    </div>
 
 </body>
 

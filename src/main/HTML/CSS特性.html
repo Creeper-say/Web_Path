@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ul[class=nav]>li:first-child {
+            color: pink;
+            font-weight: 900;
+        } */
+
+        /* body>ul:first-of-type>li:first-child {
+            color: pink;
+            font-weight: 900;
+        } */
+
+        /* li:first-child {
+            color: pink !important;
+            font-weight: 900;
+        } */
+        /* .nav li:first-child {
+            color: pink !important;
+            font-weight: 900;
+        } */
+        /* li:first-child::before {
+            content: "hello";
+            color: pink;
+            font-weight: 900;
+        } */
+
+        .nav li {
+            color: red;
+        }
+
+        /* li:nth-child(1) {
+            color: pink;
+            font-weight: 900;
+        } */
+
+
+        div:first-of-type {
+            height: 1px;
+            border: dashed 1px black;
+            border-bottom: 0px;
+            border-left: 0px;
+            border-right: 0px;
+        }
+
+        div:nth-of-type(2) table:first-child {
+            border: solid 1px #3333337a;
+            text-align: center;
+            width: 500px;
+        }
+
+        div:nth-of-type(2) table:first-child th {
+            border: solid 1px #3333337a;
+            border-collapse: collapse;
+            height: 50px;
+            line-height: 40px;
+        }
+
+        div:nth-of-type(2) table:first-child td {
+            border: solid 1px #3333337a;
+            border-collapse: collapse;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        div:nth-of-type(3) {
+            width: 398px;
+            height: 206px;
+            border: 1px solid #33333379;
+            text-align: center;
+            font-size: 16px;
+            padding-top: 192px;
+        }
+
+        div:nth-of-type(3) p {
+            margin: 0px;
+            border: 0px;
+            padding: 0px;
+            line-height: 16px;
+        }
+
+        div:nth-of-type(4) {
+            height: 41px;
+            background-color: #fcfcfc;
+            border-top: 3px solid #ff8500;
+            border-bottom: 1px solid #edeef0;
+        }
+
+        div:nth-of-type(4) a {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            color: #4c4c4c;
+            padding: 0px 17px;
+            line-height: 41px;
+        }
+
+        div:nth-of-type(4) a:hover {
+            background-color: #eceeec;
+            color: #ff8500;
+        }
+
+        div:nth-of-type(5) {
+            width: 400px;
+            height: 300px;
+            background-color: antiquewhite;
+        }
+
+        /* div:nth-of-type(5) p {
+            padding: 1000px;
+            background-color: rgba(0, 0, 0, 0.181);
+        } */
+        div:nth-of-type(5) p {
+            background-color: coral;
+            padding: 20px;
+        }
+    </style>
+</head> 
+
+<body>
+    <img src="../../resources/Images/p4.png" style="width: 800px;" />
+    <ul class="nav">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <img src="../../resources/Images/p6.png" width="800px" />
+    <br />
+    <img src="../../resources/Images/p7.png" width="800px" />
+    <br />
+    <img src="../../resources/Images/p8.png" width="800px" />
+    <br />
+    <img src="../../resources/Images/p9.png" width="800px" />
+    <div></div>
+
+    <div>
+        <table cellspacing="0">
+            <thead>
+                <th>排名</th>
+                <th>关键词</th>
+                <th>趋势</th>
+                <th>今日搜索</th>
+                <th>最近七日</th>
+                <th>相关连接</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>鬼吹灯</td>
+                    <td>&darr;</td>
+                    <td>345</td>
+                    <td>123</td>
+                    <td>
+                        <a href="">贴吧</a>
+                        <a href="">图片</a>
+                        <a href="">百度</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br />
+    <div>
+        <p>
+            今日天气朗爽,万里无云
+        </p>
+    </div>
+
+    <hr />
+    <br />
+    <br />
+    <div>
+        <a href="/">设为首页</a>
+        <a href="/">手机新浪网</a>
+        <a href="/">移动客户端</a>
+        <a href="/">博客</a>
+        <a href="/">微博</a>
+        <a href="/">关注我</a>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div>
+        <p></p>
+    </div>
+</body>
+
+</html>

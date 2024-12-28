@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>CSS页面</title>
     <style>
+        /* 后代选择器 */
         /* div span h3 {
             color: bisque;
         } */
@@ -17,6 +18,115 @@
         /* div span h3+p {
             color: rgb(245, 105, 12);
         } */
+        /* 结构伪类选择器 */
+
+        /* div span h3:nth-child(1) {
+            color: rgb(245, 105, 12);
+        } */
+        /* div span h3:nth-of-type(1) {
+            color: rgb(245, 105, 12);
+        } */
+        /* div span h3:last-child {
+            color: rgb(245, 105, 12);
+         } */
+        /* div span h3:last-of-type {
+            color: rgb(245, 105, 12);
+          } */
+
+        /* 属性选择器 
+            = 绝对等于
+            *= 包含等于
+            ^= 开头等于
+            $= 结尾等于
+        */
+        a {
+            float: left;
+            display: block;
+            margin-right: 5px;
+            background-color: rgba(14, 138, 227, 0.59);
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 25%;
+            line-height: 50px;
+            text-decoration: none;
+            color: white;
+        }
+
+        /* a[href] {
+            background-color: black;
+          } */
+        /* a[href=www] {
+            background-color: black;
+        } */
+        /* a[href*=www] {
+            background-color: black;
+          } */
+        /* a[href$=bai] {
+            background-color: black;
+          } */
+        /* a[href^=s] {
+            background-color: black;
+          } */
+        /* a[id] {
+            background-color: black;
+          } */
+
+        /* 伪类选择器 */
+        #e001>a:nth-of-type(1):link {
+            background-color: rgba(14, 138, 227, 0.59);
+        }
+
+        #e001>a:nth-of-type(1):hover {
+            background-color: antiquewhite;
+        }
+
+        /* #e001>a:nth-of-type(1):visited {
+            background-color: rgb(0, 0, 0);
+        } */
+
+        #e001>a:nth-of-type(1):active {
+            background-color: rgb(243, 146, 18);
+        }
+
+        #e001>input:nth-of-type(1):hover {
+            background-color: #49a8f1eb;
+            outline: none;
+            color: white;
+        }
+
+        #e001>input:nth-of-type(1):focus {
+            background-color: #000000;
+            outline: none;
+        }
+
+
+        #e001>input:nth-of-type(2):focus {
+            outline: none;
+        }
+
+        #e001>input:nth-of-type(2):valid {
+            background-color: #56ed0a;
+        }
+
+        #e002 {
+            width: 170px;
+            border: solid 1px #0000001f;
+            margin-left: 54px;
+        }
+
+        #e002>input {
+            outline: none;
+            border: 0;
+        }
+
+        #e002>input:focus {
+            background-color: rgb(58, 187, 238);
+        }
+
+        #e003 input:checked+label {
+            color: #56ed0a;
+        }
     </style>
 </head>
 
@@ -25,12 +135,14 @@
 
     <div>
         <span>
+            <h4>南玻</h4>
             <h3>北极</h3>
             <p>你好</p>
             <h3>南极</h3>
             <p>hello</p>
             <div>
                 <h3>荆人</h3>
+                <h3>格瑞诺尔人</h3>
             </div>
             <h3>南极2</h3>
             <p>菜花</p>
@@ -38,6 +150,35 @@
         </span>
 
     </div>
+
+    <a href="www" id="a001">1</a>
+    <a href="wwww.bai" name="002">2</a>
+    <a href="jmcom">3</a>
+    <a rel="lll" href="slop">4</a>
+    <a href="llop" id="a003">5</a>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div id="e001">
+        <input type="text" />
+        <a href="/">链接</a>
+        <input type="email" name="email" />
+    </div>
+
+    <div id="e002">
+        <input type="text" />
+        <span>❄︎</span>
+    </div>
+
+    <div id="e003">
+        <input type="radio" name="sex" id="male" />
+        <label for="male">男</label>
+        <input type="radio" name="sex" id="female" />
+        <label for="female">女</label>
+    </div>
+
 
 </body>
 

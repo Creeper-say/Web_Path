@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动案例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav_top {
+            width: 1226px;
+            height: 460px;
+            margin: 124px auto 10px auto;
+        }
+
+        .nav_top>div:first-child {
+            float: left;
+            width: 234px;
+            height: 460px;
+            background-color: #3f3d3d;
+        }
+
+        .nav_top>div:first-child ul {
+            list-style: none;
+            padding-top: 20px;
+        }
+
+        .nav_top>div:first-child ul li {
+            height: 42px;
+        }
+
+        .nav_top>div:first-child ul a {
+            display: block;
+            height: 42px;
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            line-height: 42px;
+            padding-left: 30px;
+        }
+
+        .nav_top>div:first-child ul a:hover {
+            background-color: #ee702e;
+        }
+
+        .nav_top>div:first-child ul a em {
+            float: right;
+            font-style: normal;
+            height: 16px;
+            width: 16px;
+            margin-right: 23px;
+        }
+
+        .nav_top>div:last-child {
+            float: right;
+            height: 460px;
+            width: 992px;
+            background-image: url(../../resources/Images/w1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* .nav_top>div:last-child img {
+            width: 100%;
+            height: 100%;
+        } */
+
+        .nav_top>div:last-child a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav_top>div:last-child>a:first-child {
+            float: left;
+            text-align: center;
+            margin-top: 18%;
+            width: 41px;
+            height: 69px;
+        }
+
+        .nav_top>div:last-child>a:last-child {
+            float: right;
+            text-align: center;
+            margin-top: 18%;
+            width: 41px;
+            height: 69px;
+        }
+
+        .nav_top>div:last-child>a:hover {
+            background-color: rgba(228, 222, 222, 0.173);
+        }
+
+        .nav_top>div:last-child em {
+            font-style: normal;
+        }
+
+        .swap_sign_l {
+            font-size: 30px;
+            line-height: 69px;
+        }
+
+        .swap_sign_r {
+            font-size: 30px;
+            line-height: 69px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav_top">
+        <div>
+            <ul>
+                <li><a href="#">1 <em>▹</em></a></li>
+                <li><a href="#">2 <em>▹</em></a></li>
+                <li><a href="#">3 <em>▹</em></a></li>
+                <li><a href="#">4 <em>▹</em></a></li>
+                <li><a href="#">5 <em>▹</em></a></li>
+                <li><a href="#">6 <em>▹</em></a></li>
+                <li><a href="#">7 <em>▹</em></a></li>
+                <li><a href="#">8 <em>▹</em></a></li>
+                <li><a href="#">9 <em>▹</em></a></li>
+                <li><a href="#">10 <em>▹</em></a></li>
+            </ul>▹
+        </div>
+        <div>
+            <a href="#"><em class="swap_sign_l">▹</em></a>
+            <a href="#"><em class="swap_sign_r">▹</em></a>
+        </div>
+    </div>
+</body>
+
+</html>
