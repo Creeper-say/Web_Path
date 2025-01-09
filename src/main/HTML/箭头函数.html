@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数</title>
+</head>
+
+<body>
+    <script>
+        // 1.传统函数
+        // const add = function(a, b) {
+        //     return a + b;
+        // }
+        // console.log(add(2, 3)); // 5
+
+        // 2.箭头函数 基本语法：(参数) => {函数体} 无参或者两个参数以上不能省略括号
+        const add = (a, b) => {
+            return a + b;
+        }
+        // 3.只有一个参数可以省略括号
+        const sayHello = name => {
+            console.log(`Hello, ${name}!`);
+        }
+
+        // 4. 只有一行代码可以省略大括号
+        const sayGoodbye = () => console.log('Goodbye!');
+
+        // 5.只有一行代码也可以省略return关键字
+        const square = x => x * x;
+
+        // 6.箭头函数的this指向
+        const person = {
+            name: 'Morty',
+            sayName: function () {
+                setTimeout(() => {
+                    console.log(this.name);
+                }, 1000);
+            }
+        }
+        person.sayName(); // Morty
+
+        // 7.箭头函数的arguments对象
+        const sum = (...args) => {
+            let result = 0;
+            for (let i = 0; i < args.length; i++) {
+                result += args[i];
+            }
+            return result;
+        }
+        console.log(sum(1, 2, 3, 4, 5)); // 15
+
+        // 8.箭头函数的注意事项
+        // 1.箭头函数不能使用arguments对象，会报错
+        // 2.箭头函数不能使用yield关键字，会报错
+        // 3.箭头函数不能使用new.target关键字，会报错
+        // 4.箭头函数不能使用super关键字，会报错
+
+        // 9.箭头函数的使用场景
+        // 1.回调函数
+        const arr = [1, 2, 3, 4, 5];
+        arr.forEach(function (item) {
+            console.log(item);
+        });
+        // 2.数组方法的回调函数
+        const arr2 = [1, 2, 3, 4, 5];
+        arr2.map(item => item * 2); // [2, 4, 6, 8, 10]
+        // 3.对象方法的回调函数
+        const obj = {
+            name: 'Morty',
+            sayName: function () {
+                setTimeout(function () {
+                    console.log(this.name);
+                }, 1000);
+            }
+        }
+        obj.sayName(); // Morty
+        // 4.类方法的回调函数
+        class Person {
+            // constructor 构造函数 也可以返回函数定义 
+            constructor(name) {
+                this.name = name;
+            }
+            sayName(callback) {
+                setTimeout(callback, 1000);
+            }
+        }
+        const p = new Person('Morty');
+        p.sayName(function () {
+            console.log(this.name);
+        }); // Morty    
+
+        // 10.箭头函数直接返回一个对象
+        const createObj = uname => ({ uname: uname });
+        console.log(createObj('Morty')); // {uname: "Morty"}
+
+        // 11. this指向问题 指向调用者的对象
+        console.log(this); // window
+
+        function fn() {
+            console.log(this); // window
+        }
+
+        const newObj = function () {
+            console.log(this); //window
+        }
+
+        //对象方法的this指向
+        const objss = {
+            name: 'Morty',
+            sayName: function () {
+                console.log(this); // {name: "Morty", sayName: ƒ}  objss
+                console.log(this.name); // Morty
+            }
+        }
+        console.log(objss.sayName()); // Morty
+
+        // 箭头函数的this指向
+        const objs = () => {
+            console.log(this); // window
+        }
+
+        const brandObj = {
+            name: 'jack',
+            sayHi: () => {
+                console.log(this); // window
+            }
+        }
+        brandObj.sayHi(); // window
+
+        
+        const brandObj2 = {
+            name: 'jack2',
+            sayHi: function () {
+                let i = 0;
+                const sayHi2 = () => {
+                    console.log(this); // {name: "jack2", sayHi: ƒ}  brandObj2
+                }
+                sayHi2();
+            }
+        }
+        brandObj2.sayHi(); // {name: "jack2", sayHi: ƒ}
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实例成员和静态成员</title>
+</head>
+
+<body>
+    <script>
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        // 实例成员包括 实例属性 和 实例方法
+        const Jerry = new Person("Jerry", 25); // 实例成员Jerry
+        const Tom = new Person("Tom", 26); // 实例成员Tom
+        console.log(Jerry === Tom); // false
+        console.dir(Jerry); 
+        Jerry.name = "Jerry"; // 实例属性
+        console.log(Jerry.hobby); // reading
+        Tom.catch = () => console.log("catch"); // 实例方法
+        Tom.catch(); // catch
+
+        // 静态成员包括 静态属性 和 静态方法
+        Person.count = 10; // 静态属性
+        Person.getName = function () {
+            return this.count; // this指向Person 构造函数
+        } // 静态方法
+        console.log(Person.getName()); // 10
+    </script>
+</body>
+
+</html>

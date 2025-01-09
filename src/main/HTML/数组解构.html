@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组解构</title>
+</head>
+
+<body>
+    <script>
+        "use strict"; //启用严格模式
+        // 传统
+        // let arr = [1, 3, 6];
+        // const max = arr[2];
+        // const min = arr[0];
+        // const avg = arr[1];
+        // console.log(max, min, avg);
+
+        //解构附值
+        // let arr = [1, 3, 6];
+        // const [max, min, avg] = arr;
+        // console.log(max, min, avg);
+
+        // 进一步简化
+        // const [max, min, avg] = [1, 3, 6];
+        // console.log(max, min, avg);
+
+        // 解构交换数字
+        let a = 3;
+        let b = 6;
+        [a, b] = [b, a];
+        console.log(a, b); // 6 3
+
+        // 传统交换函数
+        function swap(a, b) {
+            let temp = a;
+            a = b;
+            b = temp;
+        }
+
+
+        // 传统冒泡排序 升序
+        function bubbleSort(arr) {
+            let arrLen = arr.length;
+            let temp = arr[0];
+            for (let i = 0; i < arrLen - 1; i++) {
+                for (let j = arrLen - 1; j > i; j--) {
+                    temp = arr[j];
+                    if (arr[j] < arr[j - 1]) {
+                        arr[j] = arr[j - 1];
+                        arr[j - 1] = temp;
+                    }
+                }
+            }
+        }
+
+        // 解构冒泡排序 升序
+        function bubbleSort2(arr) {
+            let arrLen = arr.length;
+            for (let i = 0; i < arrLen - 1; i++) {
+                for (let j = 0; j < arrLen - i - 1; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+                    }
+                }
+            }
+        }
+
+
+        function setArrData() {
+            let arrLen = Math.floor(Math.random() * 11) + 5;
+            const arr = new Array(arrLen);
+            for (let i = 0; i < arrLen; i++) {
+                arr[i] = Math.floor(Math.random() * 100);
+            }
+            bubbleSort(arr);
+            console.log(...arr);
+        }
+
+
+        function setArrData2() {
+            let arrLen = Math.floor(Math.random() * 11) + 5;
+            const arr = new Array(arrLen);
+            for (let i = 0; i < arrLen; i++) {
+                arr[i] = Math.floor(Math.random() * 100);
+            }
+            bubbleSort2(arr);
+            console.log(...arr);
+        }
+
+        function runCountArrSort() {
+            let count = Math.floor(Math.random() * 10) + 1;
+            for (let i = 0; i < count; i++) {
+                setArrData();
+            }
+            console.log('-------------------');
+            for (let i = 0; i < count; i++) {
+                setArrData2();
+            }
+        }
+
+        runCountArrSort();
+
+        // 解构函数返回值
+
+        function getValues() {
+            return [100, 20];
+        }
+        let [max, min] = getValues();
+        console.log(max, min); // 100 20
+        // 也可以这样写
+        let [max2, min2] = (function() {
+            return [1200, 200];
+        })();// 立即执行函数
+        console.log(max2, min2); // 1200 200
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS闭包</title>
+    <script>
+        // 闭包
+        // function createCounter() {
+        //     var count = 0;
+        //     return function() {
+        //         return count++;
+        //     }
+        // }
+        function createCounter() {
+            let count = 0;
+            function counter() {
+                 count++;
+                 console.log(`函数调用次数: ${count}`);
+            }
+            return counter;
+        }
+
+        var ClickNum = createCounter();
+
+    </script>
+</head>
+<body>
+    <button onclick="ClickNum()"> Click me </button>
+</body>
+</html>

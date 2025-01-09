@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>塌陷案例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .fa {
+            width: 400px;
+            height: 350px;
+            background-color: #ffc0cb;
+            /* 一
+            overflow: hidden; 
+            二
+            border-top: solid 1px transparent;
+            三
+            padding-top: 1px;
+
+            如果子元素变为浮动状态,那么也可以避免引起父外边框的坍缩
+            */
+            overflow: hidden;
+        }
+
+        .son {
+            width: 100px;
+            height: 100px;
+            margin-top: 50px;
+            background-color: bisque;
+        }
+
+        .flow-box {
+            width: 1240px;
+            text-align: center;
+            border: 1px solid rgb(57, 150, 238);
+            overflow: hidden;
+            /*  method 二*/
+        }
+
+        .flow-son {
+            float: left;
+            width: 400px;
+            height: 350px;
+            line-height: 350px;
+            background-color: pink;
+        }
+
+        .flow-box>div:nth-child(2) {
+            background-color: chocolate;
+        }
+
+        /* 一
+        .clear-flow-box {
+            clear: both;
+        } */
+
+        /* 
+        伪元素清除浮动
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+            height: 0;
+            visibility: hidden;
+        } */
+
+        /*
+        双伪元素清除浮动
+        .clearfix:after,
+        .clearfix:before {
+            display: table;
+            content: '';
+        }
+
+        .clearfix:after {
+            clear: both;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="fa">
+        <div class="son">外边距塌陷</div>
+    </div>
+    <br><br><br>
+    <div class="flow-box clearfix">
+        <div class="flow-son">1</div>
+        <div class="flow-son">2 浮动塌陷</div>
+        <!-- <div class="clear-flow-box"></div> -->
+    </div>
+</body>
+
+</html>

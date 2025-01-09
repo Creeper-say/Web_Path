@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数参数</title>
+    <script>
+        // 1. 实参与形参
+        function add(num1, num2) {
+            // 从input得到的值是字符串 需要转换为数字类型 parseFloat 与 Number 都可以
+            let x = parseFloat(num1) + Number(num2);
+            document.getElementById("result").innerHTML = x;
+        }
+
+        // 2.动态参数与剩余参数
+
+        function add2() {
+            let count = Math.floor(Math.random() * 100 + 1);
+            console.log(`${count}个数字相加`);
+            let num = 0;
+            for (let i = 0; i < count; i++) {
+                let nums = Math.floor(Math.random() * 100 + 1);
+                if (i != count - 1) console.log(`${nums}+`);
+                else console.log(`${nums}=`);
+                num += nums;
+            }
+            document.getElementById("result2").innerHTML = num;
+            console.log(`结果为${num}`);
+        }
+
+        function add3() {
+            console.log(`${arguments.length}个数字相加`);
+            let sum = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                if (i != arguments.length - 1) console.log(`${arguments[i]}+`);
+                else console.log(`${arguments[i]}=`);
+                sum += arguments[i];
+            }
+            console.log(`结果为${sum}`);
+        }
+
+        function add4(a, b, ...args) {
+            console.log(`${args.length + 2}个数字相加`);
+            let sum = 0;
+            let flag = false;
+            for (let i = 0; i < args.length; i++) {
+                if (flag == false) {
+                    console.log(`${a}+${b}+`);
+                    sum = a + b;
+                    flag = true;
+                }
+                if (i != args.length - 1) console.log(`${args[i]}+`);
+                else console.log(`${args[i]}`);
+                sum += args[i];
+            }
+
+            if (flag == false) {
+                console.log(`${a}+${b}+=${a + b}`);
+                sum = a + b;
+            }
+            console.log(`结果为${sum}`);
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <input type="text" id="num1">
+    <span>+</span>
+    <input type="text" id="num2">
+    <span>=</span>
+    <span id="result"></span>
+    <button onclick="add(document.getElementById('num1').value, document.getElementById('num2').value)">计算</button>
+    <br>
+    <br>
+    <span id="result2"></span>
+    <button onclick="add2()">随机计算</button>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-构造函数</title>
+</head>
+
+<body>
+    <script>
+        // 构造函数 首字母大写 new实例化对象
+        function Animals(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        let pig = new Animals("小黄猪", 3);
+        console.log(pig.name); // 小黄猪
+        console.log(pig.age); // 3
+
+
+        function Goods(name, price, count) {
+            this.name = name;
+            this.price = price;
+            this.count = count;
+        }
+        let apple = new Goods("苹果", 2.5, 100);
+        let banana = new Goods("香蕉", 3, 50);
+        let orange = new Goods("橘子", 2.8, 200);
+        console.log(` ${apple.name} %s ${apple.price} %s ${apple.count}`, " ", " "); // 苹果   2.5   100
+        console.log(` ${banana.name} %s ${banana.price} %s ${banana.count}`, " ", " "); // 香蕉   3   50
+        console.log(` ${orange.name} %s ${orange.price} %s ${orange.count}`, " ", " "); // 橘子   2.8   200
+    </script>
+</body>
+
+</html>

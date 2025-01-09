@@ -1,0 +1,38 @@
+.docfollow {
+    background-color: #333;
+    height: 50px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.docfollow a {
+    display: inline-block;
+    width: 60px;
+    height: 50px;
+    padding: 0 15px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 50px;
+    font-size: 14px;
+    color: white;
+}
+
+.docfollow a:hover {
+    background-color: #f5f4f436;
+}
+
+
+.absolute-box {
+    position: absolute;
+    display: none;
+    min-width: 160px;
+    height: 80px;
+    background-color: white;
+    box-shadow: 0 2px 10px 2px #33333321;
+}
+
+
+.docfollow:hover .absolute-box {
+    margin-top: 5px;
+    display: block;
+}

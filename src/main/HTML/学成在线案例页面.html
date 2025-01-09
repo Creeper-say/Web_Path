@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学成在线案例页面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f4f5f7;
+        }
+
+        .top {
+            background-color: #f4f5f7;
+            margin: 30px 120px;
+            width: 1200px;
+            height: 47px;
+        }
+
+        .top-logo,
+        .top-tuijian,
+        .top-search,
+        .top-profix {
+            float: left;
+        }
+
+        .top-logo {
+            width: 199px;
+            height: 47px;
+        }
+
+        .top-logo a {
+            display: block;
+            height: 100%;
+            text-decoration: none;
+        }
+
+        .top-logo a:hover {
+            cursor: pointer;
+        }
+
+        .top-logo a h2 {
+            height: 100%;
+            background-image: url(../../resources/Images/x_logo.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .top-tuijian {
+            width: 276px;
+            height: 47px;
+            margin-left: 70px;
+        }
+
+
+        .top-tuijian h2 {
+            display: inline-block;
+            height: 47px;
+            margin-right: 26px;
+            text-align: center;
+            font-weight: 400;
+        }
+
+        .top-tuijian h2:hover {
+            border-bottom: solid 2px #44a4f8;
+            cursor: pointer;
+        }
+
+        .top-tuijian h2 a {
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 47px;
+            color: black;
+        }
+
+        .top-search {
+            width: 410px;
+            height: 38px;
+            border: solid 1px #44a4f8;
+            margin: 3.5px 0 0 59px;
+        }
+
+        .top-search:focus {
+            border: solid 0px transparent;
+        }
+
+
+        .top-search form>input:nth-of-type(1) {
+            width: 360px;
+            height: 38px;
+            font-size: 14px;
+            line-height: 38px;
+            padding-left: 20px;
+            border: solid 0px transparent;
+        }
+
+        .top-search form {
+            float: left;
+        }
+
+
+        .top-search form>input:nth-of-type(1):focus {
+            border: solid 1px #2061c5;
+        }
+
+        .top-search>button:nth-of-type(1) {
+            display: block;
+            float: left;
+            width: 50px;
+            height: 38px;
+            padding: 19px;
+            background-image: url(../../resources/Images/xue_search.jpg);
+            background-repeat: no-repeat;
+            background-size: 60%;
+            border: solid 0px transparent;
+            background-color: #43a3f7;
+            background-position: center;
+        }
+
+        .top-profix {
+            width: 70px;
+            height: 42px;
+            margin-top: 3.5px;
+            margin-left: 78px;
+        }
+
+        .top-profix img {
+            width: 40px;
+            height: 40px;
+            border-radius: 30%;
+        }
+
+        .top-profix .user-name {
+            float: right;
+            height: 100%;
+            line-height: 42px;
+        }
+
+        .banner {
+            background-color: #170c68;
+        }
+
+        .content-banner {
+            width: 1200px;
+            height: 420px;
+            margin: 0 auto;
+            background-image: url(../../resources/Images/x_banner.jpg);
+            background-repeat: no-repeat;
+        }
+
+        .sidebar {
+            float: left;
+            width: 150px;
+            height: 100%;
+            padding: 0 20px;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .class-box {
+            float: right;
+            width: 228px;
+            height: 300px;
+            margin-top: 50px;
+            background-color: #fff;
+        }
+
+        .class-box:hover {
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        }
+
+
+        .sidebar li {
+            list-style: none;
+            height: 46.5px;
+        }
+
+        .sidebar li a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            line-height: 46.5px;
+            font-size: 14px;
+        }
+
+        .sidebar li a:hover {
+            color: #44a4f8;
+        }
+
+        .sidebar li a span {
+            float: right;
+        }
+
+        .class-box {
+            color: #4e4e4e;
+            overflow: hidden;
+        }
+
+        .title {
+            width: 100%;
+            height: 48px;
+            background-color: #a5cde7;
+            color: #fff;
+            text-align: center;
+            line-height: 48px;
+            font-weight: 400;
+        }
+
+        .dl-box {
+            width: 192px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+
+        .class-box .big-text {
+            height: 22.5px;
+            line-height: 22.5px;
+            font-size: 17px;
+            margin-top: 15px;
+        }
+
+        .small {
+            font-size: 14px;
+            height: 20px;
+            line-height: 20px;
+        }
+
+        .class-box .bottom-border {
+            display: block;
+            margin-top: 8px;
+            border: solid 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .all-box {
+            display: block;
+            height: 40px;
+            border: solid 1px #43a3f7;
+            margin-top: 5px;
+            text-decoration: none;
+            color: #43a3f7;
+            font-weight: 700;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .all-box:hover {
+            background-color: #43a3f7;
+            color: white;
+            border: solid 0px transparent;
+        }
+
+        .content-1 {
+            display: flex;
+            width: 1200px;
+            height: 60px;
+            margin: 10px auto 0;
+            background-color: white;
+            box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.3);
+            align-items: center;
+
+        }
+
+        .content-1 li {
+            width: 123px;
+            height: 22px;
+            float: left;
+            font-size: 15px;
+            border-right: solid 1px rgba(0, 0, 0, 0.2);
+            list-style: none;
+            text-align: center;
+        }
+
+        .content-1 li a {
+            text-decoration: none;
+            color: black;
+            line-height: 23px;
+        }
+
+        .content-1 li a:hover {
+            color: #43a3f7;
+        }
+
+        .content-1 ul>li:first-child>a {
+            color: #43a3f7;
+        }
+
+        .content-1 span {
+            float: right;
+            margin-left: 250px;
+        }
+
+        .content-1 span a {
+            text-decoration: none;
+            color: #43a3f7;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .content-2 {
+            width: 1200px;
+            margin: 40px auto 0;
+        }
+
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+            height: 0;
+            visibility: hidden;
+        }
+
+
+        .content-2-nav {
+            margin-bottom: 15px;
+        }
+
+        .content-2-title {
+            float: left;
+            font-size: 18px;
+            font-weight: 400;
+            color: #4e4e4e;
+        }
+
+        .more {
+            float: right;
+            font-size: 12px;
+            color: #3333334f;
+            margin-right: 15px;
+        }
+
+        .main-content li {
+            list-style: none;
+            width: 228px;
+            height: 270px;
+            background-color: white;
+            float: left;
+            margin: 0 0 15px 15px;
+        }
+
+        .main-content>ul>li:first-child,
+        .main-content>ul>li:nth-child(6) {
+            margin-left: 0px;
+        }
+
+        .main-content li:hover {
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+
+        .footer {
+            background-color: white;
+            height: 417px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="top-logo">
+            <a href="#">
+                <h2></h2>
+            </a>
+        </div>
+
+        <div class="top-tuijian">
+            <h2>
+                <a href="#">首页</a>
+            </h2>
+            <h2>
+                <a href="#">推荐</a>
+            </h2>
+            <h2>
+                <a href="#">职业规划</a>
+            </h2>
+        </div>
+
+        <div class="top-search">
+            <form action="#">
+                <input name="search" type="search" placeholder="请输入要搜索的内容" />
+            </form>
+            <button></button>
+        </div>
+
+        <div class="top-profix">
+            <img src="../../resources/Images/x_user.jpg" alt="头像图片">
+            <p class="user-name">lilei</p>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="content-banner">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#">前端开发<span>></span></a></li>
+                    <li><a href="#">后端开发<span>></span></a></li>
+                    <li><a href="#">前端开发<span>></span></a></li>
+                    <li><a href="#">后端开发<span>></span></a></li>
+                    <li><a href="#">前端开发<span>></span></a></li>
+                    <li><a href="#">后端开发<span>></span></a></li>
+                    <li><a href="#">前端开发<span>></span></a></li>
+                    <li><a href="#">后端开发<span>></span></a></li>
+                    <li><a href="#">前端开发<span>></span></a></li>
+                </ul>
+            </div>
+
+            <div class="class-box">
+                <h3 class="title">我的课程表</h3>
+                <div class="dl-box">
+                    <p class="big-text">继续学习 程序语言</p>
+                    <p class="small">正在学习-使用对象</p>
+                    <em class="bottom-border"></em>
+                    <p class="big-text">继续学习 程序语言</p>
+                    <p class="small">正在学习-使用对象</p>
+                    <em class="bottom-border"></em>
+                    <p class="big-text">继续学习 程序语言</p>
+                    <p class="small">正在学习-使用对象</p>
+                    <em class="bottom-border"></em>
+                    <a class="all-box" href="#">全部课程</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-1">
+        <ul>
+            <li><a href="#">精品推荐</a></li>
+            <li><a href="#">JQuery</a></li>
+            <li><a href="#">Spark</a></li>
+            <li><a href="#">MMySQL</a></li>
+            <li><a href="#">JavaWeb</a></li>
+            <li><a href="#">MMySQL</a></li>
+            <li><a href="#">JavaWeb</a></li>
+        </ul>
+        <span><a href="#">修改兴趣</a></span>
+    </div>
+
+    <div class="content-2">
+        <div class="content-2-nav clearfix">
+            <h3 class="content-2-title">精品推荐</h3>
+            <span class="more">更多</span>
+        </div>
+        <div class="main-content clearfix">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+</body>
+
+</html>

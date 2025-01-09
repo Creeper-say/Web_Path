@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航栏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .vertical-nav {
+            background-color: #f1f1f1;
+            margin-bottom: 50px;
+        }
+
+        .vertical-nav ul {
+            list-style-type: none;
+        }
+
+        .vertical-nav ul li {
+            height: 37px;
+        }
+
+        .vertical-nav ul li a {
+            display: block;
+            height: 100%;
+            padding: 0 16px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            line-height: 37px;
+        }
+
+        .vertical-nav ul li a:hover {
+            background-color: #747474;
+            color: white;
+        }
+
+        .vertical-nav ul>li:first-child>a {
+            background-color: #67ac5c !important;
+            color: white !important;
+        }
+
+        .vertical-nav-box2 {
+            width: 200px;
+            margin: 10px;
+        }
+
+        .vertical-nav-box2 ul {
+            list-style-type: none;
+        }
+
+        .vertical-nav-box2 ul li {
+            height: 36px;
+        }
+
+        .vertical-nav-box2 ul li a {
+            display: block;
+            height: 100%;
+            line-height: 36px;
+            background-color: #f1f1f1;
+            padding: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .vertical-nav-box2 ul li a:hover {
+            background-color: #747474;
+            color: white;
+        }
+
+
+
+
+
+        .horizontal-nav {
+            height: 50px;
+            background-color: #333333;
+        }
+
+        .horizontal-nav ul {
+            list-style-type: none;
+        }
+
+        .horizontal-nav ul li {
+            float: left;
+            width: 60px;
+            height: 50px;
+        }
+
+        .horizontal-nav ul li a {
+            display: block;
+            height: 100%;
+            line-height: 50px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+        }
+
+        .horizontal-nav ul>li:first-child>a:first-child {
+            background-color: #67ac5c;
+        }
+
+        .horizontal-nav ul li a:hover {
+            background-color: #0a0a0a;
+
+        }
+
+        .horizontal-nav ul>li:first-of-type>a:hover {
+            background-color: #5d9454;
+        }
+
+        .horizontal-nav ul>li:last-of-type {
+            float: right;
+        }
+
+        .horizontal-nav-box2 {
+            height: 50px;
+            background-color: #f3f3f3;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .horizontal-nav-box2 ul {
+            list-style-type: none;
+        }
+
+        .horizontal-nav-box2 ul li {
+            width: 60px;
+            height: 50px;
+            float: left;
+        }
+
+        .horizontal-nav-box2 ul>li:last-child {
+            float: right;
+        }
+
+        .horizontal-nav-box2 ul>li:nth-child(3) {
+            background-color: #3a8bb6;
+        }
+
+        .horizontal-nav-box2 ul li a {
+            display: block;
+            height: 100%;
+            font-size: 14px;
+            color: #333;
+            text-align: center;
+            line-height: 50px;
+            text-decoration: none;
+        }
+
+        .horizontal-nav-box2 ul li a:not(a[class=blue-box]):hover {
+            background-color: #e1e1e1;
+        }
+
+        .horizontal-nav-box2 ul li a[class=blue-box]:hover {
+            background-color: #5fa0c2;
+        }
+
+        .horizontal-nav-box2 ul>li:nth-child(3) a {
+            color: white;
+        }
+
+
+        .horizontal-nav-box3 {
+            height: 50px;
+            background-color: #333333;
+        }
+
+        .horizontal-nav-box3 ul {
+            overflow: hidden;
+        }
+
+        .horizontal-nav-box3 a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .horizontal-nav-box3 ul li {
+            list-style: none;
+        }
+
+        .horizontal-nav-box3 ul li {
+            float: left;
+        }
+
+
+        .horizontal-nav-box3 ul li a {
+            width: 60px;
+            display: block;
+            height: 100%;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .horizontal-nav-box3 ul li a:hover {
+            background-color: #111111;
+        }
+
+        .downTap {
+            display: inline-block;
+        }
+
+        .downTap-href {
+            text-align: center;
+            line-height: 50px;
+            width: 80px;
+            height: 50px;
+            display: block;
+        }
+
+        .downTap-Content {
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .downTap-href:hover {
+            background-color: #0a0a0a;
+        }
+
+        .downTap:hover .downTap-Content {
+            display: block;
+            background-color: #747474;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 垂直导航栏 -->
+    <div class="vertical-nav">
+        <ul>
+            <li><a href="#">主页</a></li>
+            <li><a href="#">新闻</a></li>
+            <li><a href="#">联系</a></li>
+            <li><a href="#">关于</a></li>
+        </ul>
+    </div>
+
+    <div class="vertical-nav-box2">
+        <ul>
+            <li><a href="#">主页</a></li>
+            <li><a href="#">新闻</a></li>
+            <li><a href="#">联系</a></li>
+            <li><a href="#">关于</a></li>
+        </ul>
+    </div>
+
+    <div class="horizontal-nav">
+        <ul>
+            <li><a href="#">主页</a></li>
+            <li><a href="#">新闻</a></li>
+            <li><a href="#">联系</a></li>
+            <li><a href="#">关于</a></li>
+        </ul>
+    </div>
+
+    <div class="horizontal-nav-box2">
+        <ul>
+            <li><a href="#">主页</a></li>
+            <li><a href="#">新闻</a></li>
+            <li><a href="#" class="blue-box">联系</a></li>
+            <li><a href="#">关于</a></li>
+        </ul>
+    </div>
+
+    <!-- 导航栏含有下拉菜单 -->
+
+    <div class="horizontal-nav-box3">
+        <ul>
+            <li><a href="#">主页</a></li>
+            <li><a href="#">新闻</a></li>
+            <div class="downTap">
+                <a href="#" class="downTap-href">下拉菜单</a>
+                <div class="downTap-Content">
+                    <a href="#">链接 1</a>
+                    <a href="#">链接 2</a>
+                    <a href="#">链接 3</a>
+                </div>
+            </div>
+        </ul>
+    </div>
+</body>
+
+</html>

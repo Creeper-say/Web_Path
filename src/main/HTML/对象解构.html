@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象解构</title>
+    <script>
+        let student = {
+            name: "John",
+            age: 25,
+            gender: "male"
+        };
+
+        console.log(student.name); // John
+        console.log(student.age); // 25
+        console.log(student.gender); // male
+        console.log("====================================");
+
+        let { name, age, gender } = student;
+        console.log(name); // John
+        console.log(age); // 25
+        console.log(gender); // male
+
+        let { name1, age1, gender1 } = student;
+        console.log(name1); // undefined
+        console.log(age1); // undefined
+        console.log(gender1); // undefined
+        // 结论 ： 对象解构时，如果对象中不存在对应属性，则返回undefined 简单来说 就是解构名字和属性名要一样 
+        // 这点区别与数组解构
+
+        name = "Jack";
+        console.log(student.name); // John
+        console.log(name); // Jack
+        // 结论：对象解构时，解构出来的变量是一个新的变量，与原对象的属性无关
+
+        // 对象解构的变量名可以与原对象的属性名不一样 语法 {属性名: 新自定义变量名}
+        const person = {
+            name: "Mary",
+            age: 30,
+            gender: "female"
+        }
+
+        const { name: personName, age: personAge, gender: personGender } = person;
+        console.log(personName); // Mary
+        console.log(personAge); // 30
+        console.log(personGender); // female
+
+        // 解构数组对象
+        let cat = [{
+            name: "Tom",
+            age: 10,
+            color: "blue"
+        }];
+
+        let [{ name: catName, age: catAge, color }] = cat;
+
+        console.log(catName); // Tom
+        console.log(catAge); // 10
+        console.log(color); // blue
+
+        // 例子
+        const pig = {
+            name: "Piggy",
+            age: 6
+        }
+
+        let { name: pigName, age: pigAge } = pig;
+        console.log(pigName); // Piggy
+        console.log(pigAge); // 6
+
+        let { name: uname, age: pigAge1 } = pig;
+        console.log(uname); // Piggy
+
+        const goods = [{
+            goodsName: "玉米",
+            price: 100
+        }]
+
+        let [{ goodsName: gName, price: gPrice }] = goods;
+        console.log(gName); // 玉米
+        console.log(gPrice); // 100
+
+        // 多级对象解构
+        const pigInfo = {
+            name: "Piggy",
+            age: 15,
+            family: {
+                mother: 'Mary',
+                father: 'John',
+                brother: {
+                    olde_brother: 'Tom',
+                    younger_brother: [
+                        {
+                            name: 'Jerry',
+                            age: 12
+                        },
+                        {
+                            name: 'Mark',
+                            age: 13
+                        }
+                    ]
+                }
+            }
+        }
+        let { name: pigName3, age: pigAge3, family: { mother, father, brother: { olde_brother, younger_brother: [{ name: brother1Name, age: brother1Age }, { name: brother2Name, age: brother2Age }] } } } = pigInfo;
+        console.log("多级对象解构+++++");
+        console.log(pigName3); // Piggy
+        console.log(pigAge3); // 15
+        console.log(mother); // Mary
+        console.log(father); // John
+        console.log(olde_brother); // Tom
+        console.log(brother1Name); // Jerry
+        console.log(brother1Age); // 12
+        console.log(brother2Name); // Mark
+        console.log(brother2Age); // 13
+
+        // 新闻数据案例
+        const news = {
+            code: 200,
+            title: "今日新闻",
+            data: [
+                {
+                    title: "新闻1",
+                    content: "新闻1内容"
+                },
+                {
+                    title: "新闻2",
+                    content: "新闻2内容"
+                }
+            ]
+        }
+
+        // 只解构出data数组
+        let { data } = news;
+        console.log(data); // [{title: "新闻1", content: "新闻1内容"}, {title: "新闻2", content: "新闻2内容"}]
+        // 解构出data数组中的每一项
+        let { title, content } = data[0];
+        console.log(title); // 新闻1
+        console.log(content); // 新闻1内容
+
+        // 打印数据
+        function renderNews(data) {
+            const {data: newsData} = data;
+            console.log(newsData);
+        }
+        renderNews(news);
+
+        function renderNews1({data: newsData1}) {
+            console.log(newsData1);
+        }
+        renderNews1(news);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

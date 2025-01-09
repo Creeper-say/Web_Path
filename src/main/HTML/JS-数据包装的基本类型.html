@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据包装的基本类型</title>
+</head>
+<body>
+    <script>
+        // 正常思路 只有对象才有属性与方法
+        // 实际上, 基本类型也有属性与方法  js底层会自动把基本数据类型包装成对应的对象, 并给它添加属性与方法
+        const str = "hello world";
+        // str = "Jerry";
+        // console.log(str); // error
+        // 实际上你可以看到他有length属性
+        console.log(str.length); // 11
+        // 还有charAt方法
+        console.log(str.charAt(0)); // "h"
+    </script>
+</body>
+</html>
